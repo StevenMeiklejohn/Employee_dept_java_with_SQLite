@@ -4,6 +4,8 @@
 
 public class Runner {
     public static void main(String[] args){
+
+        Department.deleteAll();
         Department department1 = new Department("HR");
         Department department2 = new Department("Marketing");
         Department department3 = new Department("Sales");
@@ -16,6 +18,7 @@ public class Runner {
         department4.save();
         department5.save();
 
+        Employee.deleteAll();
         Employee employee1 = new Employee("Suzie Smith", department1, 45000);
         Employee employee2 = new Employee("Pat ma' Groin", department1, 45000);
 
@@ -37,6 +40,38 @@ public class Runner {
         employee6.save();
         employee7.save();
         employee8.save();
+
+//        Department tests.
+//        ================
+//        ================
+
+        Department.all();
+
+        department1.setTitle("Human Resources");
+        department1.update();
+
+        Department.all();
+
+        department1.delete();
+
+        Department.all();
+
+//        Employee tests.
+//        ===============
+//        ===============
+
+        Employee.all();
+
+        employee1.setTitle("Human Resources");
+        employee1.update();
+
+        Employee.all();
+
+        Employee1.delete();
+
+        Employee.all();
+
+
 
     }
 }
